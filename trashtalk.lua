@@ -165,7 +165,7 @@ events.register_event("player_death", function (event)
 	if #enabled_languages == 0 then
 		return
 	end
-	local language = Languages[math.random(1, #enabled_languages)]
+	local language = enabled_languages[math.random(1, #enabled_languages)]
 	local headshot = false -- shot_info:server_hitbox() return nil, so it's not possible to check for headshot now
 	local is_headshot_phrase = nil
 	if headshot then
